@@ -30,10 +30,10 @@ export const WhatIdoSection = () => {
             </div>
 
             <div className="card lg:w-1/2 hover:shadow-purple-700">
-                <h1 className="text-2xl font-bold mb-4">Tech Stack</h1>
+                <h1 className="text-2xl font-bold mb-5">Tech Stack</h1>
 
                 <div className='space-y-4'>
-                    <div className='flex gap-4'>
+                    <div className='flex flex-col md:flex-row gap-4'>
                         <h4 className='text-md font-semibold'>Backend</h4>
                         <ul className='flex flex-wrap gap-2'>
                             <li className='tag-item border-red-400 shadow-red-400'>
@@ -55,7 +55,7 @@ export const WhatIdoSection = () => {
                         </ul>
                     </div>
 
-                    <div className='flex gap-4'>
+                    <div className='flex flex-col md:flex-row gap-4'>
                         <h4 className='text-md font-semibold'>Frontend</h4>
                         <ul className='flex flex-wrap gap-2'>
                             <li className='tag-item border-blue-400 shadow-blue-400'>
@@ -81,7 +81,7 @@ export const WhatIdoSection = () => {
                         </ul>
                     </div>
 
-                    <div className='flex gap-4'>
+                    <div className='flex flex-col md:flex-row gap-4'>
                         <h4 className='text-md font-semibold'>Database</h4>
                         <ul className='flex flex-wrap gap-2'>
                             <li className='tag-item border-sky-400 shadow-sky-400'>
@@ -102,7 +102,7 @@ export const WhatIdoSection = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className='flex gap-4'>
+                    <div className='flex flex-col md:flex-row gap-4'>
                         <h4 className='text-md font-semibold'>Tools</h4>
                         <ul className='flex flex-wrap gap-2'>
                             <li className='tag-item border-yellow-800 shadow-yellow-800'>
