@@ -5,7 +5,7 @@ export const AboutMeSection = () => {
         <>
             <div className="flex flex-col lg:flex-row gap-6">
                 <div id="home" className="card lg:w-1/2 hover:shadow-green-700">
-                    <div className="flex items-center gap-6">
+                    <div className="flex flex-col md:flex-row items-center gap-6">
                         <img src="/images/zypp-illustration.png" className="flex-1/3 w-30 object-cover rounded-lg bg-gray-700 shadow shadow-slate-800" alt="Zay Yar Phone Pai" />
                         <div className="flex-2/3 flex flex-col gap-2">
                             <h1 className="text-2xl font-bold">Zay Yar Phone Pai</h1>

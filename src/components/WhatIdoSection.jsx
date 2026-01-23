@@ -35,7 +35,7 @@ export const WhatIdoSection = () => {
                 <div className='space-y-4'>
                     <div className='flex items-center gap-4'>
                         <h4 className='text-md font-semibold'>Backend</h4>
-                        <ul className='flex gap-2'>
+                        <ul className='flex flex-wrap gap-2'>
                             <li className='tag-item border-red-400 shadow-red-400'>
                                 <Icon icon="logos:laravel" width="20" />
                                 Laravel
@@ -57,7 +57,7 @@ export const WhatIdoSection = () => {
 
                     <div className='flex items-center gap-4'>
                         <h4 className='text-md font-semibold'>Frontend</h4>
-                        <ul className='flex gap-2'>
+                        <ul className='flex flex-wrap gap-2'>
                             <li className='tag-item border-blue-400 shadow-blue-400'>
                                 <Icon icon="logos:react" width="20" />
                                 React
@@ -83,7 +83,7 @@ export const WhatIdoSection = () => {
 
                     <div className='flex items-center gap-4'>
                         <h4 className='text-md font-semibold'>Database</h4>
-                        <ul className='flex gap-2'>
+                        <ul className='flex flex-wrap gap-2'>
                             <li className='tag-item border-sky-400 shadow-sky-400'>
                                 <Icon icon="logos:mysql" width="20" />
                                 MySQL
@@ -104,7 +104,7 @@ export const WhatIdoSection = () => {
                     </div>
                     <div className='flex items-center gap-4'>
                         <h4 className='text-md font-semibold'>Tools</h4>
-                        <ul className='flex gap-2'>
+                        <ul className='flex flex-wrap gap-2'>
                             <li className='tag-item border-yellow-800 shadow-yellow-800'>
                                 <Icon icon="logos:git-icon" width="20" />
                                 Git
