@@ -10,13 +10,14 @@ A personal portfolio website built with React, Vite, and Tailwind CSS. This proj
 - **Experience**: timeline of professional work history.
 - **Education**: Academic background and qualifications.
 - **Responsive Design**: Optimized for various screen sizes.
+- **Light/Dark Mode**: Seamless theme switching with persistent user preference.
 - **Modern UI**: Clean and minimal interface using Tailwind CSS.
 
 ## Tech Stack
 
 - **Framework**: [React](https://react.dev/)
 - **Build Tool**: [Vite](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
 - **Linting**: [ESLint](https://eslint.org/)
 
 ## Getting Started
@@ -80,6 +81,7 @@ zypp-portfolio/
 │   ├── assets/          # Project assets (images, icons)
 │   ├── components/      # Reusable UI components
 │   ├── layouts/         # Layout components
+│   ├── context/         # Context providers
 │   ├── pages/           # Page components
 │   ├── App.jsx          # Main application component
 │   ├── main.jsx         # Entry point
