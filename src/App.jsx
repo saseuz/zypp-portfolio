@@ -1,13 +1,16 @@
 import './App.css'
 import { MainLayout } from './layouts/MainLayout'
+import { ThemeProvider } from './context/ThemeContext'
 import { Index } from './pages/Index'
 
 function App() {
 
   return (
-    <MainLayout>
-        <Index />
-    </MainLayout>
+    <ThemeProvider>
+      <MainLayout>
+          <Index />
+      </MainLayout>
+    </ThemeProvider>
   )
 }
 

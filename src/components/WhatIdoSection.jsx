@@ -7,22 +7,22 @@ export const WhatIdoSection = () => {
                 <h1 className='text-2xl font-bold mb-4'>What I Do </h1>
 
                 <div className='space-y-2'>
-                    <div className='text-gray-400'>
+                    <div className='text-gray-600 dark:text-gray-400'>
                         <p className='font-semibold'>Backend Architecture</p>
                         <p>Laravel & Django systems built for scale</p>
                     </div>
 
-                    <div className='text-gray-400'>
+                    <div className='text-gray-600 dark:text-gray-400'>
                         <p className='font-semibold'>API & Integration</p>
                         <p>REST APIs, mobile & third-party integrations</p>
                     </div>
 
-                    <div className='text-gray-400'>
+                    <div className='text-gray-600 dark:text-gray-400'>
                         <p className='font-semibold'>Admin & Dashboard Systems</p>
                         <p>Secure RBAC, analytics, management tools</p>
                     </div>
 
-                    <div className='text-gray-400'>
+                    <div className='text-gray-600 dark:text-gray-400'>
                         <p className='font-semibold'>Performance & Security</p>
                         <p>Optimization, authentication, best practices</p>
                     </div>

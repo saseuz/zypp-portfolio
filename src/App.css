@@ -1,15 +1,36 @@
 @import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+    body {
+        @apply transition-colors duration-300 text-gray-700 dark:text-gray-100;
+    }
+
+    /* Light Mode (Default) */
+    :root {
+        @apply bg-gradient-to-tr from-rose-300 to-blue-300 via-zinc-300;
+        --text-primary: #1a1a1a;
+        --text-secondary: #4a4a4a;
+    }
+
+    /* Dark Mode */
+    .dark {
+        @apply bg-gradient-to-tr from-rose-900 to-blue-900 via-zinc-900;
+        --text-primary: #f3f4f6;
+        --text-secondary: #d1d5db;
+    }
+}
 
 @layer components {
     .card {
-        @apply bg-stone-800/30 backdrop-blur-sm p-6 rounded-lg shadow shadow-white/30 hover:shadow-md transition-all duration-300;
+        @apply bg-white/50 dark:bg-stone-800/30 backdrop-blur-xs p-6 rounded-lg shadow dark:shadow-white/30 hover:shadow-md transition-all duration-300 dark:border-gray-700;
     }
 
     .btn {
-        @apply flex items-center gap-1 border p-2 rounded font-medium duration-300 shadow-md shadow-slate-700 cursor-pointer whitespace-nowrap;
+        @apply flex items-center gap-1 border p-2 rounded font-medium duration-300 shadow-md shadow-gray-200 dark:shadow-gray-700 cursor-pointer whitespace-nowrap bg-white dark:bg-transparent border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-gray-200 hover:text-white hover:shadow-lg;
     }
 
     .tag-item {
-        @apply flex items-center gap-1 border px-2 py-1 rounded-lg shadow-xs text-sm text-gray-300 font-medium hover:shadow-md hover:-translate-y-0.5 duration-300;
+        @apply flex items-center gap-1 border px-2 py-1 rounded-lg shadow-sm text-sm font-medium hover:shadow-md hover:-translate-y-0.5 duration-300 bg-white dark:bg-transparent border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300;
     }
 }

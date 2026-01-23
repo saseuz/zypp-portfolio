@@ -7,17 +7,17 @@ export const ExperienceSection = () => {
                 <h1 className='text-2xl font-bold mb-4'>Experience</h1>
 
                 <div className='space-y-4'>
-                    <div className='text-gray-400 font-semibold'>
+                    <div className='text-gray-600 dark:text-gray-400 font-semibold'>
                         <p>2020 – 2022  Freelance</p>
                         <p>E-commerce, Job Portals, Music Platforms</p>
                     </div>
 
-                    <div className='text-gray-400 font-semibold'>
+                    <div className='text-gray-600 dark:text-gray-400 font-semibold'>
                         <p>2019 – 2020  Za Information Technology</p>
                         <p>Mid-Level Full-Stack Developer</p>
                     </div>
 
-                    <div className='text-gray-400 font-semibold'>
+                    <div className='text-gray-600 dark:text-gray-400 font-semibold'>
                         <p>2016 – 2019  Mega Myanmar Links</p>
                         <p>Full-Stack Developer</p>
                     </div>
@@ -27,7 +27,7 @@ export const ExperienceSection = () => {
             <div className="lg:w-1/2 card hover:shadow-teal-700">
                 <h1 className="text-2xl font-bold mb-4">Let's Work Together</h1>
 
-                <p className="text-gray-400 mb-4">Have a project or system to build? I work with teams and individuals to develop scalable, production-ready web applications. Let’s discuss how I can help.</p>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">Have a project or system to build? I work with teams and individuals to develop scalable, production-ready web applications. Let’s discuss how I can help.</p>
 
                 <div className="flex flex-col gap-4">
                     <a href="mailto:zayyarphonepai95@gmail.com" className="flex items-center gap-2">
