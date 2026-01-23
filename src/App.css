@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@layer components {
+    .card {
+        @apply bg-stone-800/30 backdrop-blur-sm p-6 rounded-lg shadow shadow-white/30 hover:shadow-md transition-all duration-300;
+    }
+
+    .btn {
+        @apply flex items-center gap-1 border p-2 rounded font-medium duration-300 shadow-md shadow-slate-700 cursor-pointer whitespace-nowrap;
+    }
+
+    .tag-item {
+        @apply flex items-center gap-1 border px-2 py-1 rounded-lg shadow-xs text-sm text-gray-300 font-medium hover:shadow-md hover:-translate-y-0.5 duration-300;
+    }
+}
