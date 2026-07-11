@@ -1,35 +1,71 @@
-import { Icon } from "@iconify/react";
-
 export const AboutMeSection = () => {
     return (
-        <>
-            <div className="flex flex-col lg:flex-row gap-6">
-                <div id="home" className="card lg:w-1/2 hover:shadow-green-700">
-                    <div className="flex flex-col md:flex-row items-center gap-6">
-                        <img src="/images/zypp-illustration.png" className="flex-1/3 w-30 object-cover rounded-lg bg-gray-700 shadow shadow-slate-800" alt="Zay Yar Phone Pai" />
-                        <div className="flex-2/3 flex flex-col gap-2">
-                            <h1 className="text-2xl font-bold">Zay Yar Phone Pai</h1>
-                            <h3 className="text-lg font-semibold">Senior Full-Stack Developer</h3>
-                            <p className="text-gray-600 dark:text-gray-400">Specializing in Laravel, Django, React, Vue, and scalable architecture.</p>
-
-                            <div className="flex gap-4 mt-2">
-                                <a href="#projects" className="btn border-green-500 hover:bg-green-500">
-                                    <Icon icon="material-symbols:chevron-right-rounded" width="24" /> <span className="text-sm">View My Works</span>
-                                </a>
-                                <a href="/zayyarphonepai-cv.pdf" className="btn border-blue-500 hover:bg-blue-500" target="_blank">
-                                    <Icon icon="mdi:download" width="20" />
-                                    <span className="text-sm">Download CV</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+        <section className="max-w-[1120px] mx-auto px-6 md:px-8 pt-24 md:pt-[96px] pb-20 grid grid-cols-1 lg:grid-cols-[1.55fr_1fr] gap-12 lg:gap-16 items-center">
+            <div>
+                {/* Availability status */}
+                <div className="flex items-center gap-3.5 mb-7">
+                    <span className="inline-flex items-center gap-2 font-mono text-[12px] tracking-[0.04em] uppercase text-muted">
+                        <span className="w-[7px] h-[7px] rounded-full bg-[#4ADE80] shadow-[0_0_0_3px_rgba(74,222,128,0.18)] animate-pulse"></span>
+                        Available for work
+                    </span>
                 </div>
 
-                <div className="card lg:w-2/3 hover:shadow-blue-700">
-                    <h1 className="text-2xl font-bold mb-2">About Me</h1>
-                    <p className="text-gray-600 dark:text-gray-400">I’m a <span className="font-bold">Full-stack web developer with 8+ years of hands-on experience</span> building production-ready systems for government platforms, logistics companies, and commercial products. I specialize in <span className="font-bold">Laravel</span> and <span className="font-bold">Django</span> backends with modern frontend frameworks like <span className="font-bold">React</span> and <span className="font-bold">Vue</span>. I focus on clean architecture, security, and scalable solutions that perform reliably in real-world environments.</p>
+                {/* Subtitle */}
+                <div className="font-mono text-[13px] tracking-[0.06em] uppercase text-accent mb-5.5">
+                    Senior Full-Stack Developer — 8+ Years
+                </div>
+
+                {/* Main Heading */}
+                <h1 className="font-display font-bold text-[clamp(40px,5.4vw,68px)] leading-[1.02] tracking-[-0.03em] text-text-primary mb-6.5">
+                    Production systems that hold up in the real world.
+                </h1>
+
+                {/* Paragraph */}
+                <p className="text-[18px] leading-[1.62] text-text-secondary max-w-[540px] mb-9.5">
+                    I build production-ready platforms for government, logistics, and commercial products —{" "}
+                    <span className="text-text-body font-medium">Laravel &amp; Django</span> backends with{" "}
+                    <span className="text-text-body font-medium">React &amp; Vue</span> frontends. Clean architecture, real security, and scale that performs.
+                </p>
+
+                {/* Call to Action Buttons */}
+                <div className="flex gap-3.5 flex-wrap">
+                    <a
+                        href="#work"
+                        className="inline-flex items-center gap-2.5 px-6.5 py-3.5 bg-accent text-[#0A0A0B] font-semibold text-[15px] rounded-[10px] transition-all duration-180 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(74,222,128,0.35)]"
+                    >
+                        View selected work
+                        <span className="font-mono">→</span>
+                    </a>
+                    <a
+                        href="/Zay_Yar_Phone_Pai_CV.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2.5 px-6.5 py-3.5 border border-glass-border bg-glass-bg backdrop-blur-[14px] [-webkit-backdrop-filter:blur(14px)] text-text-body font-medium text-[15px] rounded-[10px] transition-all duration-180 hover:border-line-strong-2"
+                    >
+                        Download CV
+                    </a>
                 </div>
             </div>
-        </>
-    )
-}
+
+            {/* Circular Headshot / Illustration */}
+            <div className="flex justify-center">
+                <div className="relative w-[280px] h-[280px]">
+                    {/* Ring gradient */}
+                    <div 
+                        className="absolute inset-[-1px] rounded-full p-[1px]" 
+                        style={{
+                            background: "linear-gradient(150deg, color-mix(in srgb, var(--accent) 60%, transparent), var(--hairline) 55%)"
+                        }}
+                    ></div>
+                    <div className="absolute inset-0 rounded-full overflow-hidden bg-surface-2">
+                        <img
+                            src="/images/zypp-illustration.png"
+                            alt="Zay Yar Phone Pai"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};

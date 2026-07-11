@@ -1,53 +1,57 @@
-import { Icon } from "@iconify/react";
-
 export const ExperienceSection = () => {
+    const roles = [
+        {
+            years: "2020 — 2022",
+            company: "Freelance Full-Stack Developer",
+            details: "E-commerce, job portals, and music platforms for a range of clients."
+        },
+        {
+            years: "2019 — 2020",
+            company: "Za Information Technology",
+            details: "Mid-Level Full-Stack Developer."
+        },
+        {
+            years: "2016 — 2019",
+            company: "Mega Myanmar Links",
+            details: "Full-Stack Developer."
+        }
+    ];
+
     return (
-        <div id="contact" className='flex flex-col lg:flex-row gap-6'>
-            <div className="card lg:w-2/3 hover:shadow-red-700">
-                <h1 className='text-2xl font-bold mb-4'>Experience</h1>
+        <section id="experience" className="border-t border-hairline bg-tint">
+            <div className="max-w-[1120px] mx-auto px-6 md:px-8 py-24">
+                {/* Tag */}
+                <div className="font-mono text-[13px] tracking-[0.06em] uppercase text-accent mb-4">
+                    Experience
+                </div>
 
-                <div className='space-y-4'>
-                    <div className='text-gray-600 dark:text-gray-400 font-semibold'>
-                        <p>2020 – 2022  Freelance</p>
-                        <p>E-commerce, Job Portals, Music Platforms</p>
-                    </div>
+                {/* Heading */}
+                <h2 className="font-display font-semibold text-[clamp(28px,3.4vw,40px)] tracking-[-0.02em] text-text-primary mb-14">
+                    A decade of shipping.
+                </h2>
 
-                    <div className='text-gray-600 dark:text-gray-400 font-semibold'>
-                        <p>2019 – 2020  Za Information Technology</p>
-                        <p>Mid-Level Full-Stack Developer</p>
-                    </div>
-
-                    <div className='text-gray-600 dark:text-gray-400 font-semibold'>
-                        <p>2016 – 2019  Mega Myanmar Links</p>
-                        <p>Full-Stack Developer</p>
-                    </div>
+                {/* List */}
+                <div className="border-b border-hairline-2">
+                    {roles.map(({ years, company, details }) => (
+                        <div
+                            key={company}
+                            className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-6 py-7 border-t border-hairline-2 align-baseline"
+                        >
+                            <div className="font-mono text-[14px] text-muted">
+                                {years}
+                            </div>
+                            <div>
+                                <h3 className="font-display font-semibold text-[20px] text-text-primary mb-1.5">
+                                    {company}
+                                </h3>
+                                <p className="text-[15px] text-muted">
+                                    {details}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
-
-            <div className="lg:w-1/2 card hover:shadow-teal-700">
-                <h1 className="text-2xl font-bold mb-4">Let's Work Together</h1>
-
-                <p className="text-gray-600 dark:text-gray-400 mb-4">Have a project or system to build? I work with teams and individuals to develop scalable, production-ready web applications. Let’s discuss how I can help.</p>
-
-                <div className="flex flex-col gap-4">
-                    <a href="mailto:zayyarphonepai95@gmail.com" className="flex items-center gap-2">
-                        <Icon icon="logos:google-gmail" width="20" />
-                        zayyarphonepai95@gmail.com
-                    </a>
-
-                    <div className="flex space-x-4">
-                        <a href="https://www.linkedin.com/in/zyphpi/" className="btn border-blue-400 hover:bg-blue-400 group" target="_blank">
-                            <Icon icon="logos:linkedin-icon" width="20" className="group-hover:bg-white" />
-                            LinkedIn
-                        </a>
-                        <a href="https://github.com/saseuz" className="btn border-gray-500 hover:bg-gray-500" target="_blank">
-                            <Icon icon="logos:github-icon" width="20" />
-                            Github
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    )
-}
+        </section>
+    );
+};

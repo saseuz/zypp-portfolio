@@ -1,36 +1,120 @@
 @import "tailwindcss";
-@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-bg: var(--bg);
+  --color-bg-alt: var(--bg-alt);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-text-primary: var(--text);
+  --color-text-body: var(--text-body);
+  --color-text-secondary: var(--text-2);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-faint-2: var(--faint-2);
+  --color-hairline: var(--hairline);
+  --color-hairline-2: var(--hairline-2);
+  --color-line-strong: var(--line-strong);
+  --color-line-strong-2: var(--line-strong-2);
+  --color-hover-bg: var(--hover-bg);
+  --color-nav-bg: var(--nav-bg);
+  --color-glass-bg: var(--glass-bg);
+  --color-glass-border: var(--glass-border);
+  --color-tint: var(--tint);
+  --color-accent: var(--accent);
+}
 
 @layer base {
-    body {
-        @apply transition-colors duration-300 text-gray-700 dark:text-gray-100;
-    }
+  :root {
+    --bg: #FBFBF9;
+    --bg-alt: #F2F2EE;
+    --surface: #FFFFFF;
+    --surface-2: #EFEFEC;
+    --text: #14141A;
+    --text-body: #24242A;
+    --text-2: #3A3A42;
+    --muted: #5E5E68;
+    --faint: #8A8A93;
+    --faint-2: #A8A8B0;
+    --hairline: rgba(0, 0, 0, 0.08);
+    --hairline-2: rgba(0, 0, 0, 0.10);
+    --line-strong: rgba(0, 0, 0, 0.16);
+    --line-strong-2: rgba(0, 0, 0, 0.28);
+    --hover-bg: rgba(0, 0, 0, 0.05);
+    --nav-bg: rgba(251, 251, 249, 0.6);
+    --glass-bg: rgba(255, 255, 255, 0.55);
+    --glass-border: rgba(255, 255, 255, 0.75);
+    --tint: rgba(0, 0, 0, 0.02);
+    --accent: #16A34A; /* Rich green for readability in light mode */
 
-    /* Light Mode (Default) */
-    :root {
-        @apply bg-gradient-to-tr from-rose-300 to-blue-300 via-zinc-300;
-        --text-primary: #1a1a1a;
-        --text-secondary: #4a4a4a;
-    }
+    background: var(--bg);
+    color: var(--text-body);
+  }
 
-    /* Dark Mode */
-    .dark {
-        @apply bg-gradient-to-tr from-rose-900 to-blue-900 via-zinc-900;
-        --text-primary: #f3f4f6;
-        --text-secondary: #d1d5db;
-    }
+  .dark {
+    --bg: #0A0A0B;
+    --bg-alt: #0C0C0E;
+    --surface: #101013;
+    --surface-2: #131417;
+    --text: #FFFFFF;
+    --text-body: #ECECEE;
+    --text-2: #B4B4BC;
+    --muted: #9B9BA3;
+    --faint: #7C7C85;
+    --faint-2: #5A5A62;
+    --hairline: rgba(255, 255, 255, 0.07);
+    --hairline-2: rgba(255, 255, 255, 0.08);
+    --line-strong: rgba(255, 255, 255, 0.16);
+    --line-strong-2: rgba(255, 255, 255, 0.28);
+    --hover-bg: rgba(255, 255, 255, 0.04);
+    --nav-bg: rgba(10, 10, 11, 0.55);
+    --glass-bg: rgba(255, 255, 255, 0.045);
+    --glass-border: rgba(255, 255, 255, 0.10);
+    --tint: rgba(255, 255, 255, 0.015);
+    --accent: #4ADE80; /* Requested green accent color */
+
+    background: var(--bg);
+    color: var(--text-body);
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text-body);
+    transition: background 0.3s, color 0.3s;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(74, 222, 128, 0.28); /* Green selection color */
+  }
 }
 
 @layer components {
-    .card {
-        @apply bg-white/50 dark:bg-stone-800/30 backdrop-blur-xs p-6 rounded-lg shadow dark:shadow-white/30 hover:shadow-md transition-all duration-300 dark:border-gray-700;
-    }
+  /* Legacy card & button utilities with updated variable properties */
+  .card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.16);
+    padding: 36px 40px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
 
-    .btn {
-        @apply flex items-center gap-1 border p-2 rounded font-medium duration-300 shadow-md shadow-gray-200 dark:shadow-gray-700 cursor-pointer whitespace-nowrap bg-white dark:bg-transparent border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-gray-200 hover:text-white hover:shadow-lg;
-    }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    color: var(--text-body);
+    transition: border-color 0.18s, background 0.18s;
+    cursor: pointer;
+  }
 
-    .tag-item {
-        @apply flex items-center gap-1 border px-2 py-1 rounded-lg shadow-sm text-sm font-medium hover:shadow-md hover:-translate-y-0.5 duration-300 bg-white dark:bg-transparent border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300;
-    }
+  .btn:hover {
+    border-color: var(--line-strong-2);
+    background: var(--hover-bg);
+  }
 }
