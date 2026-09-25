@@ -1,6 +1,16 @@
 export const ExperienceSection = () => {
     const roles = [
         {
+            years: "2024 — Present (Independent)",
+            company: "Full-Stack Web Developer",
+            details: "Social Aether, Personal Portfolio, TasteBoat, Movie Review Apps"
+        },
+        {
+            years: "Aug 2022 – Mar 2024",
+            company: "Career Break",
+            details: "Took a planned break to care for a family member, while continuing to build technical skills through Harvard's CS50x (completed December 2024) and self-directed learning"
+        },
+        {
             years: "2020 — 2022",
             company: "Freelance Full-Stack Developer",
             details: "E-commerce, job portals, and music platforms for a range of clients."
