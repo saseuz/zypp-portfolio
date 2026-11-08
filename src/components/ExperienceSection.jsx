@@ -3,17 +3,17 @@ export const ExperienceSection = () => {
         {
             years: "2024 — Present (Independent)",
             company: "Full-Stack Web Developer",
-            details: "Social Aether, Personal Portfolio, TasteBoat, Movie Review Apps"
+            details: "Built production-grade platforms including PuTu (mobile backend & admin CMS), Social Aether (React 19 + Laravel 13 social network with real-time notifications), and Lito Dictionary (Next.js + Manifest V3 extension)."
         },
-        {
-            years: "Aug 2022 – Mar 2024",
-            company: "Career Break",
-            details: "Took a planned break to care for a family member, while continuing to build technical skills through Harvard's CS50x (completed December 2024) and self-directed learning"
-        },
+        // {
+        //     years: "Aug 2022 – Mar 2024",
+        //     company: "Career Break",
+        //     details: "Took a planned break to care for a family member, while continuing to build technical skills through Harvard's CS50x (completed December 2024) and self-directed learning"
+        // },
         {
             years: "2020 — 2022",
             company: "Freelance Full-Stack Developer",
-            details: "E-commerce, job portals, and music platforms for a range of clients."
+            details: "Migrated product media infrastructure, reducing page load times and boosting stability."
         },
         {
             years: "2019 — 2020",

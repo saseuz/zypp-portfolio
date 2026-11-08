@@ -1,6 +1,14 @@
 export const EduSection = () => {
     const certs = [
         {
+            title: "B.Sc. in Computer Science",
+            issuer: " University of the People · (In Progress)"
+        },
+        {
+            title: "IBM Full Stack Software Developer Professional Certificate",
+            issuer: "IBM / Coursera (Nov 2026)"
+        },
+        {
             title: "CS50's Web Programming with Python & JavaScript",
             issuer: "Harvard University · Jul 2025"
         },
@@ -8,14 +16,14 @@ export const EduSection = () => {
             title: "CS50x — Intro to Computer Science",
             issuer: "Harvard University · Dec 2024"
         },
-        {
-            title: "Web Professional Advanced",
-            issuer: "Myanmar Links, Yangon · May 2015"
-        },
-        {
-            title: "Web Professional Foundation",
-            issuer: "Myanmar Links, Yangon · Sep 2014"
-        }
+        // {
+        //     title: "Web Professional Advanced",
+        //     issuer: "Myanmar Links, Yangon · May 2015"
+        // },
+        // {
+        //     title: "Web Professional Foundation",
+        //     issuer: "Myanmar Links, Yangon · Sep 2014"
+        // }
     ];
 
     return (

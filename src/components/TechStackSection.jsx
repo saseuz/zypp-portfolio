@@ -2,7 +2,7 @@ const stackRows = [
     { label: "Backend",  items: "Laravel\u00a0·\u00a0 Django\u00a0·\u00a0 PHP\u00a0·\u00a0 Python" },
     { label: "Frontend", items: "React\u00a0·\u00a0 Vue\u00a0·\u00a0 Next.js\u00a0·\u00a0 TypeScript\u00a0·\u00a0 Vite" },
     { label: "Database", items: "MySQL\u00a0·\u00a0 PostgreSQL\u00a0·\u00a0 Redis\u00a0·\u00a0 MongoDB" },
-    { label: "Tools",    items: "Git\u00a0·\u00a0 GitHub\u00a0·\u00a0 REST APIs\u00a0·\u00a0 Postman" },
+    { label: "Tools",    items: "Git\u00a0·\u00a0 GitHub\u00a0·\u00a0 REST APIs\u00a0·\u00a0 Postman\u00a0·\u00a0 DevOps & Cloud" },
 ];
 
 export const TechStackSection = () => {

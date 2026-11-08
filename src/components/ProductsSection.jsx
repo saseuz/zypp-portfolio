@@ -3,28 +3,32 @@ import { Icon } from "@iconify/react";
 export const ProductsSection = () => {
     const projects = [
         {
+            title: "PuTu",
+            type: "Kids' Learning App",
+            tech: "REST API · Laravel · Mobile Backend · CMS",
+            description: "Backend REST API and admin dashboard powering a cross-platform (iOS & Android) early learning app with optimized audio/image delivery and privacy-first architecture",
+            links: {
+                android:
+                "https://play.google.com/store/apps/details?id=com.litobird.putu",
+                ios: "https://apps.apple.com/us/app/putu/id6822578181",
+            },
+            image: "/images/putu.png"
+        },
+        {
+            title: "Lito Dictionary",
+            type: "Dictionary",
+            tech: "Next.js · Laravel API · TypeScript · Manifest V3",
+            description: "Full-stack dictionary platform featuring a Next.js web application, rate-limited public API, and cross-browser extension for Chromium, Firefox, and Safari.",
+            link: "https://chromewebstore.google.com/detail/lito-dictionary/fjcocfhmiigemomnpgpaldfopkknlgem?authuser=0&hl=en",
+            image: "/images/lito-dictionary.png"
+        },
+        {
             title: "TasteBoat",
             type: "Recipe platform",
             tech: "Laravel · Vue · React · Vite · Tailwind",
-            description: "Cook and save favourites, rate dishes, and track your own meals — recipes curated by real cooks, not the algorithm.",
+            description: "Decoupled food discovery platform: Headless Laravel REST API with SSR React frontend deployed via CI/CD to Vercel and Laravel Cloud.",
             link: "https://tasteboat.vercel.app/",
             image: "/images/tasteboat.png"
-        },
-        {
-            title: "Pacific-AA Online Shop",
-            type: "E-commerce",
-            tech: "Laravel · Vue",
-            description: "A secure e-commerce platform with product categories, promotions, and a checkout tuned for performance under load.",
-            link: "https://onlineshop.aa.com.mm/",
-            image: "/images/aa-shop.png"
-        },
-        {
-            title: "Melo Music",
-            type: "Streaming",
-            tech: "Laravel · Vue",
-            description: "A music streaming platform with subscriptions, payments, and a mobile API powering playback across devices.",
-            link: "https://melomm.com/",
-            image: "/images/melo-music.png"
         },
         {
             title: "Myanmar Post & Logistics",
@@ -37,7 +41,23 @@ export const ProductsSection = () => {
                 value: "500+",
                 label: "shipments tracked daily"
             }
-        }
+        },
+        // {
+        //     title: "Pacific-AA Online Shop",
+        //     type: "E-commerce",
+        //     tech: "Laravel · Vue",
+        //     description: "A secure e-commerce platform with product categories, promotions, and a checkout tuned for performance under load.",
+        //     link: "https://onlineshop.aa.com.mm/",
+        //     image: "/images/aa-shop.png"
+        // },
+        // {
+        //     title: "Melo Music",
+        //     type: "Streaming",
+        //     tech: "Laravel · Vue",
+        //     description: "A music streaming platform with subscriptions, payments, and a mobile API powering playback across devices.",
+        //     link: "https://melomm.com/",
+        //     image: "/images/melo-music.png"
+        // },
     ];
 
     return (
@@ -59,7 +79,7 @@ export const ProductsSection = () => {
 
             {/* Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {projects.map(({ title, type, tech, description, link, image, stat }) => (
+                {projects.map(({ title, type, tech, description, link, links, image, stat }) => (
                     <div
                         key={title}
                         className="group border border-glass-border rounded-2xl overflow-hidden bg-glass-bg backdrop-blur-[16px] [-webkit-backdrop-filter:blur(16px)] shadow-[0_10px_34px_rgba(0,0,0,0.20)] transition-all duration-200 hover:border-[color-mix(in_srgb,var(--accent)_45%,transparent)] hover:-translate-y-[3px]"
@@ -102,7 +122,8 @@ export const ProductsSection = () => {
                                         </span>
                                     </div>
                                 )}
-                                <div>
+                                <div className="flex justify-between">
+                                    {link && 
                                     <a
                                         href={link}
                                         target="_blank"
@@ -111,7 +132,21 @@ export const ProductsSection = () => {
                                     >
                                         View case study
                                         <span className="font-mono">→</span>
-                                    </a>
+                                    </a>}
+
+                                    {links && 
+                                    Object.entries(links).map(([platform, url]) => (
+                                        <a
+                                        key={platform}
+                                        href={url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 text-[14px] font-medium text-text-body transition-all duration-180 group-hover:gap-3.5 group-hover:text-accent capitalize"
+                                        >
+                                        View on {platform}
+                                        <span className="font-mono">→</span>
+                                        </a>
+                                    ))}
                                 </div>
                             </div>
                         </div>
